@@ -1,8 +1,6 @@
 # recipe-pipeline
 
-# 📘 Recipe Analytics Pipeline – Full Technical Documentation  
-### (with Corporate Structure + Beginner-Friendly Clarity)
-
+# 📘 Recipe Analytics Pipeline
 This project implements a complete **end-to-end Data Engineering Pipeline** using **Firebase Firestore** as the source system and **Python** for ETL, transformation, validation, and analytical reporting.  
 It combines **technical depth (Option C)** with **professional formatting (Option A)** and **clarity for beginners (Option D)**.
 
@@ -40,7 +38,7 @@ This project demonstrates:
 - Visualization generation  
 
 
-# 2️⃣ Architecture Diagram (Conceptual)
+# 2️⃣ Architecture Diagram 
 
 ```
                 ┌───────────────────────────┐
@@ -76,7 +74,7 @@ This project demonstrates:
 ```
 
 
-# 3️⃣ Data Model (Detailed)
+# 3️⃣ Data Model 
 
 ## 📌 Recipes Collection (Core Dataset)
 | Field             | Type   | Description                         |
@@ -135,7 +133,7 @@ Recipes are structured with:
 - Weighted difficulty levels (50% easy, 35% medium, 15% hard)
 
 
-# 5️⃣ ETL Pipeline (Technical Breakdown)
+# 5️⃣ ETL Pipeline 
 
 ### ✔ Extraction  
 Using `firebase_admin`, data is exported from Firestore to JSON files.
@@ -203,7 +201,7 @@ All analytics results saved in `analysis/`.
 - Frequency distributions  
 
 
-# 8️⃣ Folder Structure (Final)
+# 8️⃣ Folder Structure 
 
 ```
 recipe-pipeline/
