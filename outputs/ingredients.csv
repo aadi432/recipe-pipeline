@@ -1,0 +1,168 @@
+recipe_id,ingredient_name,ingredient_quantity
+aloo_gobi_009,potato,250g
+aloo_gobi_009,coriander powder,2 tbsp
+aloo_gobi_009,oil,1 tsp
+aloo_gobi_009,green chilli,1 tbsp
+aloo_gobi_009,coriander leaves,1 tbsp
+aloo_gobi_009,mustard seeds,2 tbsp
+aloo_gobi_009,red chilli powder,1 tsp
+aloo_gobi_009,tomato,½ cup
+aloo_gobi_009,ginger,½ cup
+bhindi_masala_020,okra,200g
+bhindi_masala_020,tomato,½ cup
+bhindi_masala_020,coriander powder,2 tsp
+bhindi_masala_020,peas,2 tbsp
+bhindi_masala_020,cumin seeds,1 cup
+bhindi_masala_020,ginger,½ cup
+bhindi_masala_020,turmeric,1 tbsp
+bhindi_masala_020,coriander leaves,2 tbsp
+chole_masala_010,chickpeas,200g
+chole_masala_010,tomato,1 tsp
+chole_masala_010,lemon,1 tbsp
+chole_masala_010,capsicum,½ cup
+chole_masala_010,green chilli,1 tbsp
+chole_masala_010,coriander leaves,1 cup
+chole_masala_010,mustard seeds,1 cup
+chole_masala_010,coriander powder,1 tsp
+dal_makhani_013,lentils,1 cup
+dal_makhani_013,coriander powder,1 tbsp
+dal_makhani_013,oil,1 tsp
+dal_makhani_013,lemon,1 cup
+dal_makhani_013,garlic,½ cup
+dal_makhani_013,tomato,1 tbsp
+dal_makhani_013,peas,2 tsp
+dal_makhani_013,turmeric,1 cup
+dal_tadka_012,lentils,2 cups
+dal_tadka_012,carrot,2 tbsp
+dal_tadka_012,beans,1 tsp
+dal_tadka_012,ginger,1 tsp
+dal_tadka_012,tomato,1 tbsp
+dal_tadka_012,turmeric,1 cup
+dal_tadka_012,coriander leaves,1 tbsp
+jeera_rice_008,mixed vegetables,150g
+jeera_rice_008,ginger,1 tbsp
+jeera_rice_008,carrot,2 tsp
+jeera_rice_008,capsicum,2 tbsp
+jeera_rice_008,mustard seeds,1 cup
+jeera_rice_008,cumin seeds,2 tbsp
+jeera_rice_008,red chilli powder,2 tbsp
+jeera_rice_008,garlic,1 tsp
+kadai_paneer_003,mixed vegetables,200g
+kadai_paneer_003,garam masala,2 tsp
+kadai_paneer_003,turmeric,2 tsp
+kadai_paneer_003,ginger,1 cup
+kadai_paneer_003,carrot,2 tsp
+kadai_paneer_003,capsicum,1 cup
+kadai_paneer_003,mustard seeds,1 cup
+kadai_paneer_003,peas,1 cup
+masala_dosa_014,mixed vegetables,250g
+masala_dosa_014,garlic,2 tsp
+masala_dosa_014,peas,½ cup
+masala_dosa_014,green chilli,1 cup
+masala_dosa_014,onion,2 tsp
+masala_dosa_014,oil,1 tsp
+masala_dosa_014,beans,1 tbsp
+masala_dosa_014,lemon,1 cup
+masala_dosa_014,capsicum,1 tbsp
+palak_paneer_004,mixed vegetables,250g
+palak_paneer_004,onion,½ cup
+palak_paneer_004,ginger,2 tbsp
+palak_paneer_004,garam masala,1 tbsp
+palak_paneer_004,lemon,1 tbsp
+palak_paneer_004,coriander leaves,½ cup
+palak_paneer_004,carrot,1 tsp
+palak_paneer_004,butter,1 tbsp
+paneer_bhurji_006,paneer,200g
+paneer_bhurji_006,mustard seeds,2 tbsp
+paneer_bhurji_006,butter,1 cup
+paneer_bhurji_006,peas,1 cup
+paneer_bhurji_006,tomato,½ cup
+paneer_bhurji_006,lemon,1 tsp
+paneer_bhurji_006,cumin seeds,2 tbsp
+paneer_tikka_masala_002,paneer,200g
+paneer_tikka_masala_002,carrot,1 tsp
+paneer_tikka_masala_002,cumin seeds,2 tbsp
+paneer_tikka_masala_002,oil,½ cup
+paneer_tikka_masala_002,garlic,2 tbsp
+paneer_tikka_masala_002,beans,1 tbsp
+paneer_tikka_masala_002,red chilli powder,2 tbsp
+paneer_tikka_masala_002,ginger,1 tbsp
+pav_bhaji_001,potato,3 medium
+pav_bhaji_001,cauliflower,1 cup
+pav_bhaji_001,green peas,1 cup
+pav_bhaji_001,tomato,2 medium
+pav_bhaji_001,onion,2 medium
+pav_bhaji_001,capsicum,1
+pav_bhaji_001,pav bhaji masala,2 tbsp
+pav_bhaji_001,red chilli powder,1 tsp
+pav_bhaji_001,turmeric,0.5 tsp
+pav_bhaji_001,ginger garlic paste,1 tbsp
+pav_bhaji_001,butter,2 tbsp
+pav_bhaji_001,oil,2 tbsp
+pav_bhaji_001,salt,to taste
+poha_017,flattened rice,250g
+poha_017,green chilli,½ cup
+poha_017,capsicum,2 tsp
+poha_017,turmeric,1 cup
+poha_017,butter,½ cup
+poha_017,mustard seeds,1 cup
+poha_017,lemon,2 tsp
+poha_017,garam masala,1 cup
+poha_017,oil,2 tsp
+rajma_masala_011,kidney beans,1 cup
+rajma_masala_011,onion,1 cup
+rajma_masala_011,beans,2 tsp
+rajma_masala_011,ginger,2 tbsp
+rajma_masala_011,turmeric,1 cup
+rajma_masala_011,green chilli,1 cup
+rajma_masala_011,lemon,½ cup
+rajma_masala_011,coriander powder,½ cup
+rajma_masala_011,tomato,2 tbsp
+shahi_paneer_005,mixed vegetables,200g
+shahi_paneer_005,mustard seeds,2 tsp
+shahi_paneer_005,oil,1 tbsp
+shahi_paneer_005,red chilli powder,1 tbsp
+shahi_paneer_005,tomato,1 tbsp
+shahi_paneer_005,coriander powder,½ cup
+shahi_paneer_005,garam masala,½ cup
+shahi_paneer_005,ginger,1 cup
+upma_016,mixed vegetables,2 cups
+upma_016,lemon,2 tbsp
+upma_016,ginger,2 tbsp
+upma_016,oil,2 tsp
+upma_016,green chilli,1 cup
+upma_016,tomato,2 tbsp
+upma_016,garlic,½ cup
+veg_biryani_007,mixed vegetables,1 cup
+veg_biryani_007,oil,½ cup
+veg_biryani_007,coriander leaves,½ cup
+veg_biryani_007,carrot,1 tbsp
+veg_biryani_007,capsicum,1 tbsp
+veg_biryani_007,red chilli powder,2 tbsp
+veg_biryani_007,turmeric,1 cup
+veg_manchurian_018,mixed vegetables,150g
+veg_manchurian_018,red chilli powder,½ cup
+veg_manchurian_018,garlic,1 tsp
+veg_manchurian_018,onion,1 cup
+veg_manchurian_018,carrot,1 cup
+veg_manchurian_018,butter,1 tsp
+veg_manchurian_018,beans,2 tsp
+veg_manchurian_018,cumin seeds,1 cup
+veg_manchurian_018,coriander powder,1 tsp
+vegetable_fried_rice_019,mixed vegetables,150g
+vegetable_fried_rice_019,cumin seeds,1 tbsp
+vegetable_fried_rice_019,garlic,1 cup
+vegetable_fried_rice_019,turmeric,½ cup
+vegetable_fried_rice_019,ginger,1 cup
+vegetable_fried_rice_019,butter,½ cup
+vegetable_fried_rice_019,oil,½ cup
+vegetable_fried_rice_019,peas,1 cup
+vegetable_fried_rice_019,mustard seeds,½ cup
+vegetable_sambar_015,mixed vegetables,150g
+vegetable_sambar_015,beans,1 cup
+vegetable_sambar_015,onion,1 cup
+vegetable_sambar_015,cumin seeds,1 tsp
+vegetable_sambar_015,lemon,½ cup
+vegetable_sambar_015,mustard seeds,1 tsp
+vegetable_sambar_015,garlic,2 tsp
+vegetable_sambar_015,ginger,1 tbsp

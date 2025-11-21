@@ -1,0 +1,1674 @@
+[
+    {
+        "created_at": "2025-11-21T10:57:36.479490",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Aloo Gobi.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add potato along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            }
+        ],
+        "description": "Aloo Gobi prepared in a simple vegetarian style with balanced spices.",
+        "id": "aloo_gobi_009",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "Indo-Chinese",
+        "servings": 3,
+        "calories": 256,
+        "ingredients": [
+            {
+                "quantity": "250g",
+                "name": "potato"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "coriander powder"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "oil"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "green chilli"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "coriander leaves"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "mustard seeds"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "red chilli powder"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "tomato"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "ginger"
+            }
+        ],
+        "prep_time_minutes": 17,
+        "cook_time_minutes": 21,
+        "difficulty": "hard",
+        "title": "Aloo Gobi",
+        "document_id": "aloo_gobi_009"
+    },
+    {
+        "created_at": "2025-11-21T10:57:37.332742",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Bhindi Masala.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add okra along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            }
+        ],
+        "description": "Bhindi Masala prepared in a simple vegetarian style with balanced spices.",
+        "id": "bhindi_masala_020",
+        "region": "West India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "South Indian",
+        "servings": 3,
+        "calories": 399,
+        "ingredients": [
+            {
+                "quantity": "200g",
+                "name": "okra"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "tomato"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "coriander powder"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "peas"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "cumin seeds"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "ginger"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "turmeric"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "coriander leaves"
+            }
+        ],
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 33,
+        "difficulty": "easy",
+        "title": "Bhindi Masala",
+        "document_id": "bhindi_masala_020"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.525260",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Chole Masala.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add chickpeas along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            }
+        ],
+        "description": "Chole Masala prepared in a simple vegetarian style with balanced spices.",
+        "id": "chole_masala_010",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "North Indian",
+        "servings": 3,
+        "calories": 478,
+        "ingredients": [
+            {
+                "quantity": "200g",
+                "name": "chickpeas"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "tomato"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "lemon"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "capsicum"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "green chilli"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "coriander leaves"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "mustard seeds"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "coriander powder"
+            }
+        ],
+        "prep_time_minutes": 10,
+        "cook_time_minutes": 36,
+        "difficulty": "easy",
+        "title": "Chole Masala",
+        "document_id": "chole_masala_010"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.829232",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Dal Makhani.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add lentils along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            },
+            {
+                "text": "Finish with coriander, butter or lemon juice and serve warm.",
+                "order": 8
+            }
+        ],
+        "description": "Dal Makhani prepared in a simple vegetarian style with balanced spices.",
+        "id": "dal_makhani_013",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "Indo-Chinese",
+        "servings": 4,
+        "calories": 514,
+        "ingredients": [
+            {
+                "quantity": "1 cup",
+                "name": "lentils"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "coriander powder"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "oil"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "lemon"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "garlic"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "tomato"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "peas"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "turmeric"
+            }
+        ],
+        "prep_time_minutes": 16,
+        "cook_time_minutes": 28,
+        "difficulty": "easy",
+        "title": "Dal Makhani",
+        "document_id": "dal_makhani_013"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.727718",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Dal Tadka.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add lentils along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            }
+        ],
+        "description": "Dal Tadka prepared in a simple vegetarian style with balanced spices.",
+        "id": "dal_tadka_012",
+        "region": "North India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "Indo-Chinese",
+        "servings": 3,
+        "calories": 380,
+        "ingredients": [
+            {
+                "quantity": "2 cups",
+                "name": "lentils"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "carrot"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "beans"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "ginger"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "tomato"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "turmeric"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "coriander leaves"
+            }
+        ],
+        "prep_time_minutes": 16,
+        "cook_time_minutes": 40,
+        "difficulty": "medium",
+        "title": "Dal Tadka",
+        "document_id": "dal_tadka_012"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.416520",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Jeera Rice.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            }
+        ],
+        "description": "Jeera Rice prepared in a simple vegetarian style with balanced spices.",
+        "id": "jeera_rice_008",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "South Indian",
+        "servings": 2,
+        "calories": 431,
+        "ingredients": [
+            {
+                "quantity": "150g",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "ginger"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "carrot"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "capsicum"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "mustard seeds"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "cumin seeds"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "red chilli powder"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "garlic"
+            }
+        ],
+        "prep_time_minutes": 22,
+        "cook_time_minutes": 34,
+        "difficulty": "medium",
+        "title": "Jeera Rice",
+        "document_id": "jeera_rice_008"
+    },
+    {
+        "created_at": "2025-11-21T10:57:35.314749",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Kadai Paneer.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            }
+        ],
+        "description": "Kadai Paneer prepared in a simple vegetarian style with balanced spices.",
+        "id": "kadai_paneer_003",
+        "region": "North India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "South Indian",
+        "servings": 4,
+        "calories": 467,
+        "ingredients": [
+            {
+                "quantity": "200g",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "garam masala"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "turmeric"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "ginger"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "carrot"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "capsicum"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "mustard seeds"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "peas"
+            }
+        ],
+        "prep_time_minutes": 12,
+        "cook_time_minutes": 29,
+        "difficulty": "medium",
+        "title": "Kadai Paneer",
+        "document_id": "kadai_paneer_003"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.889003",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Masala Dosa.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            }
+        ],
+        "description": "Masala Dosa prepared in a simple vegetarian style with balanced spices.",
+        "id": "masala_dosa_014",
+        "region": "West India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "South Indian",
+        "servings": 3,
+        "calories": 422,
+        "ingredients": [
+            {
+                "quantity": "250g",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "garlic"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "peas"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "green chilli"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "onion"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "oil"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "beans"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "lemon"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "capsicum"
+            }
+        ],
+        "prep_time_minutes": 22,
+        "cook_time_minutes": 28,
+        "difficulty": "easy",
+        "title": "Masala Dosa",
+        "document_id": "masala_dosa_014"
+    },
+    {
+        "created_at": "2025-11-21T10:57:35.441675",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Palak Paneer.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            }
+        ],
+        "description": "Palak Paneer prepared in a simple vegetarian style with balanced spices.",
+        "id": "palak_paneer_004",
+        "region": "North India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "South Indian",
+        "servings": 4,
+        "calories": 547,
+        "ingredients": [
+            {
+                "quantity": "250g",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "onion"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "ginger"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "garam masala"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "lemon"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "coriander leaves"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "carrot"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "butter"
+            }
+        ],
+        "prep_time_minutes": 17,
+        "cook_time_minutes": 37,
+        "difficulty": "medium",
+        "title": "Palak Paneer",
+        "document_id": "palak_paneer_004"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.200476",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Paneer Bhurji.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add paneer along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            }
+        ],
+        "description": "Paneer Bhurji prepared in a simple vegetarian style with balanced spices.",
+        "id": "paneer_bhurji_006",
+        "region": "North India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "North Indian",
+        "servings": 3,
+        "calories": 480,
+        "ingredients": [
+            {
+                "quantity": "200g",
+                "name": "paneer"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "mustard seeds"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "butter"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "peas"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "tomato"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "lemon"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "cumin seeds"
+            }
+        ],
+        "prep_time_minutes": 13,
+        "cook_time_minutes": 29,
+        "difficulty": "easy",
+        "title": "Paneer Bhurji",
+        "document_id": "paneer_bhurji_006"
+    },
+    {
+        "created_at": "2025-11-21T10:57:35.040031",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Paneer Tikka Masala.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add paneer along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            },
+            {
+                "text": "Finish with coriander, butter or lemon juice and serve warm.",
+                "order": 8
+            }
+        ],
+        "description": "Paneer Tikka Masala prepared in a simple vegetarian style with balanced spices.",
+        "id": "paneer_tikka_masala_002",
+        "region": "North India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "South Indian",
+        "servings": 3,
+        "calories": 506,
+        "ingredients": [
+            {
+                "quantity": "200g",
+                "name": "paneer"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "carrot"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "cumin seeds"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "oil"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "garlic"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "beans"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "red chilli powder"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "ginger"
+            }
+        ],
+        "prep_time_minutes": 23,
+        "cook_time_minutes": 23,
+        "difficulty": "easy",
+        "title": "Paneer Tikka Masala",
+        "document_id": "paneer_tikka_masala_002"
+    },
+    {
+        "created_at": "2025-11-21T10:57:33.445975",
+        "steps": [
+            {
+                "text": "Peel and chop onions into very small pieces (pea-size).",
+                "order": 1
+            },
+            {
+                "text": "Wash and dice tomatoes into small cubes (Ludo dice size).",
+                "order": 2
+            },
+            {
+                "text": "Peel and cut potatoes into medium cubes (sugar-cube size).",
+                "order": 3
+            },
+            {
+                "text": "Remove capsicum seeds and chop into small cubes.",
+                "order": 4
+            },
+            {
+                "text": "Cut cauliflower into small florets (thumb-nail size).",
+                "order": 5
+            },
+            {
+                "text": "Boil potatoes, cauliflower, peas in pressure cooker for 3 whistles.",
+                "order": 6
+            },
+            {
+                "text": "In a pan, heat oil and butter; saut\u00e9 onions till light brown, add ginger-garlic paste.",
+                "order": 7
+            },
+            {
+                "text": "Add tomatoes and spices; cook until soft and mushy.",
+                "order": 8
+            },
+            {
+                "text": "Add boiled veggies and mash with masher; add 0.5\u20131 cup water, simmer 10 minutes.",
+                "order": 9
+            },
+            {
+                "text": "Toast pav on tawa with butter until golden; serve with bhaji, chopped onion and lemon.",
+                "order": 10
+            }
+        ],
+        "description": "Beginner friendly pav bhaji",
+        "id": "pav_bhaji_001",
+        "region": "Maharashtra",
+        "tags": [
+            "vegetarian",
+            "street-food"
+        ],
+        "cuisine": "Indian",
+        "servings": 4,
+        "calories": 420,
+        "ingredients": [
+            {
+                "quantity": "3 medium",
+                "name": "potato"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "cauliflower"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "green peas"
+            },
+            {
+                "quantity": "2 medium",
+                "name": "tomato"
+            },
+            {
+                "quantity": "2 medium",
+                "name": "onion"
+            },
+            {
+                "quantity": "1",
+                "name": "capsicum"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "pav bhaji masala"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "red chilli powder"
+            },
+            {
+                "quantity": "0.5 tsp",
+                "name": "turmeric"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "ginger garlic paste"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "butter"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "oil"
+            },
+            {
+                "quantity": "to taste",
+                "name": "salt"
+            }
+        ],
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 20,
+        "difficulty": "easy",
+        "title": "Pav Bhaji - Super Easy",
+        "document_id": "pav_bhaji_001"
+    },
+    {
+        "created_at": "2025-11-21T10:57:37.093583",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Poha.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add flattened rice along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            }
+        ],
+        "description": "Poha prepared in a simple vegetarian style with balanced spices.",
+        "id": "poha_017",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "Indo-Chinese",
+        "servings": 4,
+        "calories": 442,
+        "ingredients": [
+            {
+                "quantity": "250g",
+                "name": "flattened rice"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "green chilli"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "capsicum"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "turmeric"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "butter"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "mustard seeds"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "lemon"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "garam masala"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "oil"
+            }
+        ],
+        "prep_time_minutes": 17,
+        "cook_time_minutes": 32,
+        "difficulty": "medium",
+        "title": "Poha",
+        "document_id": "poha_017"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.658325",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Rajma Masala.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add kidney beans along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            },
+            {
+                "text": "Finish with coriander, butter or lemon juice and serve warm.",
+                "order": 8
+            }
+        ],
+        "description": "Rajma Masala prepared in a simple vegetarian style with balanced spices.",
+        "id": "rajma_masala_011",
+        "region": "North India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "Indo-Chinese",
+        "servings": 3,
+        "calories": 342,
+        "ingredients": [
+            {
+                "quantity": "1 cup",
+                "name": "kidney beans"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "onion"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "beans"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "ginger"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "turmeric"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "green chilli"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "lemon"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "coriander powder"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "tomato"
+            }
+        ],
+        "prep_time_minutes": 11,
+        "cook_time_minutes": 35,
+        "difficulty": "medium",
+        "title": "Rajma Masala",
+        "document_id": "rajma_masala_011"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.095753",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Shahi Paneer.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            }
+        ],
+        "description": "Shahi Paneer prepared in a simple vegetarian style with balanced spices.",
+        "id": "shahi_paneer_005",
+        "region": "West India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "North Indian",
+        "servings": 2,
+        "calories": 270,
+        "ingredients": [
+            {
+                "quantity": "200g",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "mustard seeds"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "oil"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "red chilli powder"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "tomato"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "coriander powder"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "garam masala"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "ginger"
+            }
+        ],
+        "prep_time_minutes": 24,
+        "cook_time_minutes": 29,
+        "difficulty": "medium",
+        "title": "Shahi Paneer",
+        "document_id": "shahi_paneer_005"
+    },
+    {
+        "created_at": "2025-11-21T10:57:37.037051",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Upma.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            }
+        ],
+        "description": "Upma prepared in a simple vegetarian style with balanced spices.",
+        "id": "upma_016",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "North Indian",
+        "servings": 2,
+        "calories": 435,
+        "ingredients": [
+            {
+                "quantity": "2 cups",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "lemon"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "ginger"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "oil"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "green chilli"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "tomato"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "garlic"
+            }
+        ],
+        "prep_time_minutes": 25,
+        "cook_time_minutes": 20,
+        "difficulty": "easy",
+        "title": "Upma",
+        "document_id": "upma_016"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.290874",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Veg Biryani.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            },
+            {
+                "text": "Finish with coriander, butter or lemon juice and serve warm.",
+                "order": 8
+            }
+        ],
+        "description": "Veg Biryani prepared in a simple vegetarian style with balanced spices.",
+        "id": "veg_biryani_007",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "North Indian",
+        "servings": 4,
+        "calories": 335,
+        "ingredients": [
+            {
+                "quantity": "1 cup",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "oil"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "coriander leaves"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "carrot"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "capsicum"
+            },
+            {
+                "quantity": "2 tbsp",
+                "name": "red chilli powder"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "turmeric"
+            }
+        ],
+        "prep_time_minutes": 14,
+        "cook_time_minutes": 28,
+        "difficulty": "medium",
+        "title": "Veg Biryani",
+        "document_id": "veg_biryani_007"
+    },
+    {
+        "created_at": "2025-11-21T10:57:37.188485",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Veg Manchurian.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            }
+        ],
+        "description": "Veg Manchurian prepared in a simple vegetarian style with balanced spices.",
+        "id": "veg_manchurian_018",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "North Indian",
+        "servings": 3,
+        "calories": 421,
+        "ingredients": [
+            {
+                "quantity": "150g",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "red chilli powder"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "garlic"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "onion"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "carrot"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "butter"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "beans"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "cumin seeds"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "coriander powder"
+            }
+        ],
+        "prep_time_minutes": 22,
+        "cook_time_minutes": 24,
+        "difficulty": "easy",
+        "title": "Veg Manchurian",
+        "document_id": "veg_manchurian_018"
+    },
+    {
+        "created_at": "2025-11-21T10:57:37.248768",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Vegetable Fried Rice.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            }
+        ],
+        "description": "Vegetable Fried Rice prepared in a simple vegetarian style with balanced spices.",
+        "id": "vegetable_fried_rice_019",
+        "region": "South India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "South Indian",
+        "servings": 3,
+        "calories": 492,
+        "ingredients": [
+            {
+                "quantity": "150g",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "cumin seeds"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "garlic"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "turmeric"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "ginger"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "butter"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "oil"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "peas"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "mustard seeds"
+            }
+        ],
+        "prep_time_minutes": 23,
+        "cook_time_minutes": 39,
+        "difficulty": "medium",
+        "title": "Vegetable Fried Rice",
+        "document_id": "vegetable_fried_rice_019"
+    },
+    {
+        "created_at": "2025-11-21T10:57:36.968230",
+        "steps": [
+            {
+                "text": "Wash, chop and prepare all ingredients needed for Vegetable Sambar.",
+                "order": 1
+            },
+            {
+                "text": "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
+                "order": 2
+            },
+            {
+                "text": "Add onions, ginger, garlic or green chillies and saut\u00e9 until soft and golden.",
+                "order": 3
+            },
+            {
+                "text": "Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.",
+                "order": 4
+            },
+            {
+                "text": "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
+                "order": 5
+            },
+            {
+                "text": "Add a little water to adjust consistency. Cover and simmer on low flame.",
+                "order": 6
+            },
+            {
+                "text": "Taste, adjust seasoning and cook for another minute for better flavor balance.",
+                "order": 7
+            },
+            {
+                "text": "Finish with coriander, butter or lemon juice and serve warm.",
+                "order": 8
+            }
+        ],
+        "description": "Vegetable Sambar prepared in a simple vegetarian style with balanced spices.",
+        "id": "vegetable_sambar_015",
+        "region": "West India",
+        "tags": [
+            "vegetarian",
+            "home-style"
+        ],
+        "cuisine": "North Indian",
+        "servings": 2,
+        "calories": 257,
+        "ingredients": [
+            {
+                "quantity": "150g",
+                "name": "mixed vegetables"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "beans"
+            },
+            {
+                "quantity": "1 cup",
+                "name": "onion"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "cumin seeds"
+            },
+            {
+                "quantity": "\u00bd cup",
+                "name": "lemon"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "mustard seeds"
+            },
+            {
+                "quantity": "2 tsp",
+                "name": "garlic"
+            },
+            {
+                "quantity": "1 tbsp",
+                "name": "ginger"
+            }
+        ],
+        "prep_time_minutes": 23,
+        "cook_time_minutes": 24,
+        "difficulty": "hard",
+        "title": "Vegetable Sambar",
+        "document_id": "vegetable_sambar_015"
+    }
+]
