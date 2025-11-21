@@ -124,7 +124,7 @@ Source data is created using `1_setup_firestore.py`.
 
 ### **Interactions**
 
-* 120 synthetic interactions including:
+* 361 synthetic interactions including:
 
   * `view`
   * `like`
