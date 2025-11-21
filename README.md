@@ -309,6 +309,4 @@ This will:
 
 This submission presents a structured, academic-style **end-to-end data engineering pipeline**. It demonstrates the transformation of NoSQL Firestore data into validated analytical datasets, supported by orchestration, modeling, validation, and visualization components.
 
----
 
-**End of README**
