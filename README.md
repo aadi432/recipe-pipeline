@@ -1,4 +1,4 @@
-# recipe-pipeline
+# Recipe-Pipeline
 
 # Recipe Analytics Pipeline (Firebase + Python)
 
