@@ -115,7 +115,7 @@ Source data is created using `1_setup_firestore.py`.
 
 ### **Synthetic Recipes**
 
-* 20 additional vegetarian recipes
+* 19 additional vegetarian recipes
 * Random cuisine, region, difficulty, ingredients, steps
 
 ### **Users**
@@ -124,7 +124,7 @@ Source data is created using `1_setup_firestore.py`.
 
 ### **Interactions**
 
-* 361 synthetic interactions including:
+* 360 synthetic interactions including:
 
   * `view`
   * `like`
