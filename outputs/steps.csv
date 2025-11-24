@@ -1,79 +1,81 @@
-recipe_id,step_order,step_text
-aloo_gobi_009,1,"Wash, chop and prepare all ingredients needed for Aloo Gobi."
-aloo_gobi_009,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-aloo_gobi_009,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-aloo_gobi_009,4,Add potato along with any supporting vegetables or masala bases and cook briefly.
-aloo_gobi_009,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-aloo_gobi_009,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-aloo_gobi_009,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-bhindi_masala_020,1,"Wash, chop and prepare all ingredients needed for Bhindi Masala."
-bhindi_masala_020,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-bhindi_masala_020,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-bhindi_masala_020,4,Add okra along with any supporting vegetables or masala bases and cook briefly.
-bhindi_masala_020,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-bhindi_masala_020,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-bhindi_masala_020,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-chole_masala_010,1,"Wash, chop and prepare all ingredients needed for Chole Masala."
-chole_masala_010,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-chole_masala_010,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-chole_masala_010,4,Add chickpeas along with any supporting vegetables or masala bases and cook briefly.
-chole_masala_010,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-chole_masala_010,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-dal_makhani_013,1,"Wash, chop and prepare all ingredients needed for Dal Makhani."
-dal_makhani_013,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-dal_makhani_013,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-dal_makhani_013,4,Add lentils along with any supporting vegetables or masala bases and cook briefly.
-dal_makhani_013,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-dal_makhani_013,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-dal_makhani_013,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-dal_makhani_013,8,"Finish with coriander, butter or lemon juice and serve warm."
-dal_tadka_012,1,"Wash, chop and prepare all ingredients needed for Dal Tadka."
-dal_tadka_012,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-dal_tadka_012,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-dal_tadka_012,4,Add lentils along with any supporting vegetables or masala bases and cook briefly.
-dal_tadka_012,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-dal_tadka_012,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-jeera_rice_008,1,"Wash, chop and prepare all ingredients needed for Jeera Rice."
-jeera_rice_008,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-jeera_rice_008,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-jeera_rice_008,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-jeera_rice_008,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-jeera_rice_008,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-jeera_rice_008,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-kadai_paneer_003,1,"Wash, chop and prepare all ingredients needed for Kadai Paneer."
-kadai_paneer_003,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-kadai_paneer_003,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-kadai_paneer_003,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-kadai_paneer_003,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-kadai_paneer_003,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-masala_dosa_014,1,"Wash, chop and prepare all ingredients needed for Masala Dosa."
-masala_dosa_014,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-masala_dosa_014,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-masala_dosa_014,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-masala_dosa_014,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-masala_dosa_014,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-masala_dosa_014,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-palak_paneer_004,1,"Wash, chop and prepare all ingredients needed for Palak Paneer."
-palak_paneer_004,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-palak_paneer_004,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-palak_paneer_004,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-palak_paneer_004,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-palak_paneer_004,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-palak_paneer_004,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-paneer_bhurji_006,1,"Wash, chop and prepare all ingredients needed for Paneer Bhurji."
-paneer_bhurji_006,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-paneer_bhurji_006,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-paneer_bhurji_006,4,Add paneer along with any supporting vegetables or masala bases and cook briefly.
-paneer_bhurji_006,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-paneer_bhurji_006,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-paneer_tikka_masala_002,1,"Wash, chop and prepare all ingredients needed for Paneer Tikka Masala."
-paneer_tikka_masala_002,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-paneer_tikka_masala_002,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-paneer_tikka_masala_002,4,Add paneer along with any supporting vegetables or masala bases and cook briefly.
-paneer_tikka_masala_002,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-paneer_tikka_masala_002,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-paneer_tikka_masala_002,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-paneer_tikka_masala_002,8,"Finish with coriander, butter or lemon juice and serve warm."
+recipe_id,order,step_text
+aloo_gobi_009,1,Wash all ingredients for Aloo Gobi.
+aloo_gobi_009,2,Heat oil on medium flame.
+aloo_gobi_009,3,"Add onions, ginger, garlic; sauté until golden."
+aloo_gobi_009,4,Add potato and other vegetables.
+aloo_gobi_009,5,Add spices and cook until masala thickens.
+aloo_gobi_009,6,"Add water, cover and simmer for 10 minutes."
+aloo_gobi_009,7,Adjust salt and mix well.
+bhindi_masala_020,1,Wash all ingredients for Bhindi Masala.
+bhindi_masala_020,2,Heat oil on medium flame.
+bhindi_masala_020,3,"Add onions, ginger, garlic; sauté until golden."
+bhindi_masala_020,4,Add okra and other vegetables.
+bhindi_masala_020,5,Add spices and cook until masala thickens.
+bhindi_masala_020,6,"Add water, cover and simmer for 10 minutes."
+bhindi_masala_020,7,Adjust salt and mix well.
+bhindi_masala_020,8,Serve hot with roti or rice.
+chole_masala_010,1,Wash all ingredients for Chole Masala.
+chole_masala_010,2,Heat oil on medium flame.
+chole_masala_010,3,"Add onions, ginger, garlic; sauté until golden."
+chole_masala_010,4,Add chickpeas and other vegetables.
+chole_masala_010,5,Add spices and cook until masala thickens.
+chole_masala_010,6,"Add water, cover and simmer for 10 minutes."
+dal_makhani_013,1,Wash all ingredients for Dal Makhani.
+dal_makhani_013,2,Heat oil on medium flame.
+dal_makhani_013,3,"Add onions, ginger, garlic; sauté until golden."
+dal_makhani_013,4,Add lentils and other vegetables.
+dal_makhani_013,5,Add spices and cook until masala thickens.
+dal_makhani_013,6,"Add water, cover and simmer for 10 minutes."
+dal_tadka_012,1,Wash all ingredients for Dal Tadka.
+dal_tadka_012,2,Heat oil on medium flame.
+dal_tadka_012,3,"Add onions, ginger, garlic; sauté until golden."
+dal_tadka_012,4,Add lentils and other vegetables.
+dal_tadka_012,5,Add spices and cook until masala thickens.
+dal_tadka_012,6,"Add water, cover and simmer for 10 minutes."
+dal_tadka_012,7,Adjust salt and mix well.
+jeera_rice_008,1,Wash all ingredients for Jeera Rice.
+jeera_rice_008,2,Heat oil on medium flame.
+jeera_rice_008,3,"Add onions, ginger, garlic; sauté until golden."
+jeera_rice_008,4,Add mixed vegetables and other vegetables.
+jeera_rice_008,5,Add spices and cook until masala thickens.
+jeera_rice_008,6,"Add water, cover and simmer for 10 minutes."
+jeera_rice_008,7,Adjust salt and mix well.
+jeera_rice_008,8,Serve hot with roti or rice.
+kadai_paneer_003,1,Wash all ingredients for Kadai Paneer.
+kadai_paneer_003,2,Heat oil on medium flame.
+kadai_paneer_003,3,"Add onions, ginger, garlic; sauté until golden."
+kadai_paneer_003,4,Add mixed vegetables and other vegetables.
+kadai_paneer_003,5,Add spices and cook until masala thickens.
+kadai_paneer_003,6,"Add water, cover and simmer for 10 minutes."
+kadai_paneer_003,7,Adjust salt and mix well.
+kadai_paneer_003,8,Serve hot with roti or rice.
+masala_dosa_014,1,Wash all ingredients for Masala Dosa.
+masala_dosa_014,2,Heat oil on medium flame.
+masala_dosa_014,3,"Add onions, ginger, garlic; sauté until golden."
+masala_dosa_014,4,Add mixed vegetables and other vegetables.
+masala_dosa_014,5,Add spices and cook until masala thickens.
+masala_dosa_014,6,"Add water, cover and simmer for 10 minutes."
+palak_paneer_004,1,Wash all ingredients for Palak Paneer.
+palak_paneer_004,2,Heat oil on medium flame.
+palak_paneer_004,3,"Add onions, ginger, garlic; sauté until golden."
+palak_paneer_004,4,Add mixed vegetables and other vegetables.
+palak_paneer_004,5,Add spices and cook until masala thickens.
+palak_paneer_004,6,"Add water, cover and simmer for 10 minutes."
+paneer_bhurji_006,1,Wash all ingredients for Paneer Bhurji.
+paneer_bhurji_006,2,Heat oil on medium flame.
+paneer_bhurji_006,3,"Add onions, ginger, garlic; sauté until golden."
+paneer_bhurji_006,4,Add paneer and other vegetables.
+paneer_bhurji_006,5,Add spices and cook until masala thickens.
+paneer_bhurji_006,6,"Add water, cover and simmer for 10 minutes."
+paneer_bhurji_006,7,Adjust salt and mix well.
+paneer_bhurji_006,8,Serve hot with roti or rice.
+paneer_tikka_masala_002,1,Wash all ingredients for Paneer Tikka Masala.
+paneer_tikka_masala_002,2,Heat oil on medium flame.
+paneer_tikka_masala_002,3,"Add onions, ginger, garlic; sauté until golden."
+paneer_tikka_masala_002,4,Add paneer and other vegetables.
+paneer_tikka_masala_002,5,Add spices and cook until masala thickens.
+paneer_tikka_masala_002,6,"Add water, cover and simmer for 10 minutes."
+paneer_tikka_masala_002,7,Adjust salt and mix well.
 pav_bhaji_001,1,Peel and chop onions into very small pieces (pea-size).
 pav_bhaji_001,2,Wash and dice tomatoes into small cubes (Ludo dice size).
 pav_bhaji_001,3,Peel and cut potatoes into medium cubes (sugar-cube size).
@@ -84,59 +86,61 @@ pav_bhaji_001,7,"In a pan, heat oil and butter; sauté onions till light brown, 
 pav_bhaji_001,8,Add tomatoes and spices; cook until soft and mushy.
 pav_bhaji_001,9,"Add boiled veggies and mash with masher; add 0.5–1 cup water, simmer 10 minutes."
 pav_bhaji_001,10,"Toast pav on tawa with butter until golden; serve with bhaji, chopped onion and lemon."
-poha_017,1,"Wash, chop and prepare all ingredients needed for Poha."
-poha_017,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-poha_017,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-poha_017,4,Add flattened rice along with any supporting vegetables or masala bases and cook briefly.
-poha_017,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-poha_017,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-poha_017,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-rajma_masala_011,1,"Wash, chop and prepare all ingredients needed for Rajma Masala."
-rajma_masala_011,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-rajma_masala_011,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-rajma_masala_011,4,Add kidney beans along with any supporting vegetables or masala bases and cook briefly.
-rajma_masala_011,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-rajma_masala_011,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-rajma_masala_011,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-rajma_masala_011,8,"Finish with coriander, butter or lemon juice and serve warm."
-shahi_paneer_005,1,"Wash, chop and prepare all ingredients needed for Shahi Paneer."
-shahi_paneer_005,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-shahi_paneer_005,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-shahi_paneer_005,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-shahi_paneer_005,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-shahi_paneer_005,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-upma_016,1,"Wash, chop and prepare all ingredients needed for Upma."
-upma_016,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-upma_016,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-upma_016,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-upma_016,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-upma_016,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-upma_016,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-veg_biryani_007,1,"Wash, chop and prepare all ingredients needed for Veg Biryani."
-veg_biryani_007,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-veg_biryani_007,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-veg_biryani_007,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-veg_biryani_007,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-veg_biryani_007,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-veg_biryani_007,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-veg_biryani_007,8,"Finish with coriander, butter or lemon juice and serve warm."
-veg_manchurian_018,1,"Wash, chop and prepare all ingredients needed for Veg Manchurian."
-veg_manchurian_018,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-veg_manchurian_018,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-veg_manchurian_018,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-veg_manchurian_018,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-veg_manchurian_018,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-vegetable_fried_rice_019,1,"Wash, chop and prepare all ingredients needed for Vegetable Fried Rice."
-vegetable_fried_rice_019,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-vegetable_fried_rice_019,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-vegetable_fried_rice_019,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-vegetable_fried_rice_019,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-vegetable_fried_rice_019,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-vegetable_sambar_015,1,"Wash, chop and prepare all ingredients needed for Vegetable Sambar."
-vegetable_sambar_015,2,Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.
-vegetable_sambar_015,3,"Add onions, ginger, garlic or green chillies and sauté until soft and golden."
-vegetable_sambar_015,4,Add mixed vegetables along with any supporting vegetables or masala bases and cook briefly.
-vegetable_sambar_015,5,Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.
-vegetable_sambar_015,6,Add a little water to adjust consistency. Cover and simmer on low flame.
-vegetable_sambar_015,7,"Taste, adjust seasoning and cook for another minute for better flavor balance."
-vegetable_sambar_015,8,"Finish with coriander, butter or lemon juice and serve warm."
+poha_017,1,Wash all ingredients for Poha.
+poha_017,2,Heat oil on medium flame.
+poha_017,3,"Add onions, ginger, garlic; sauté until golden."
+poha_017,4,Add flattened rice and other vegetables.
+poha_017,5,Add spices and cook until masala thickens.
+poha_017,6,"Add water, cover and simmer for 10 minutes."
+poha_017,7,Adjust salt and mix well.
+rajma_masala_011,1,Wash all ingredients for Rajma Masala.
+rajma_masala_011,2,Heat oil on medium flame.
+rajma_masala_011,3,"Add onions, ginger, garlic; sauté until golden."
+rajma_masala_011,4,Add kidney beans and other vegetables.
+rajma_masala_011,5,Add spices and cook until masala thickens.
+rajma_masala_011,6,"Add water, cover and simmer for 10 minutes."
+rajma_masala_011,7,Adjust salt and mix well.
+rajma_masala_011,8,Serve hot with roti or rice.
+shahi_paneer_005,1,Wash all ingredients for Shahi Paneer.
+shahi_paneer_005,2,Heat oil on medium flame.
+shahi_paneer_005,3,"Add onions, ginger, garlic; sauté until golden."
+shahi_paneer_005,4,Add mixed vegetables and other vegetables.
+shahi_paneer_005,5,Add spices and cook until masala thickens.
+shahi_paneer_005,6,"Add water, cover and simmer for 10 minutes."
+shahi_paneer_005,7,Adjust salt and mix well.
+upma_016,1,Wash all ingredients for Upma.
+upma_016,2,Heat oil on medium flame.
+upma_016,3,"Add onions, ginger, garlic; sauté until golden."
+upma_016,4,Add mixed vegetables and other vegetables.
+upma_016,5,Add spices and cook until masala thickens.
+upma_016,6,"Add water, cover and simmer for 10 minutes."
+upma_016,7,Adjust salt and mix well.
+veg_biryani_007,1,Wash all ingredients for Veg Biryani.
+veg_biryani_007,2,Heat oil on medium flame.
+veg_biryani_007,3,"Add onions, ginger, garlic; sauté until golden."
+veg_biryani_007,4,Add mixed vegetables and other vegetables.
+veg_biryani_007,5,Add spices and cook until masala thickens.
+veg_biryani_007,6,"Add water, cover and simmer for 10 minutes."
+veg_biryani_007,7,Adjust salt and mix well.
+veg_manchurian_018,1,Wash all ingredients for Veg Manchurian.
+veg_manchurian_018,2,Heat oil on medium flame.
+veg_manchurian_018,3,"Add onions, ginger, garlic; sauté until golden."
+veg_manchurian_018,4,Add mixed vegetables and other vegetables.
+veg_manchurian_018,5,Add spices and cook until masala thickens.
+veg_manchurian_018,6,"Add water, cover and simmer for 10 minutes."
+veg_manchurian_018,7,Adjust salt and mix well.
+vegetable_fried_rice_019,1,Wash all ingredients for Vegetable Fried Rice.
+vegetable_fried_rice_019,2,Heat oil on medium flame.
+vegetable_fried_rice_019,3,"Add onions, ginger, garlic; sauté until golden."
+vegetable_fried_rice_019,4,Add mixed vegetables and other vegetables.
+vegetable_fried_rice_019,5,Add spices and cook until masala thickens.
+vegetable_fried_rice_019,6,"Add water, cover and simmer for 10 minutes."
+vegetable_fried_rice_019,7,Adjust salt and mix well.
+vegetable_sambar_015,1,Wash all ingredients for Vegetable Sambar.
+vegetable_sambar_015,2,Heat oil on medium flame.
+vegetable_sambar_015,3,"Add onions, ginger, garlic; sauté until golden."
+vegetable_sambar_015,4,Add mixed vegetables and other vegetables.
+vegetable_sambar_015,5,Add spices and cook until masala thickens.
+vegetable_sambar_015,6,"Add water, cover and simmer for 10 minutes."
+vegetable_sambar_015,7,Adjust salt and mix well.
+vegetable_sambar_015,8,Serve hot with roti or rice.

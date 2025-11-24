@@ -1,4 +1,3 @@
-# scripts/1_setup_firestore.py
 import firebase_admin
 from firebase_admin import credentials, firestore
 import json
@@ -7,188 +6,259 @@ import random
 import datetime
 import re
 import os
+import logging
+from dotenv import load_dotenv
+from utils_retry import retry   # RETRY DECORATOR
 
-# CONFIG
-SERVICE_ACCOUNT_PATH = r"C:\Users\DELL\Desktop\recipe-pipeline\serviceAccount.json"
-PAV_SEED_PATH = r"C:\Users\DELL\Desktop\recipe-pipeline\seed_data.json"
+# =====================================================
+# 1. LOGGING CONFIGURATION
+# =====================================================
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger(__name__)
+
+# =====================================================
+# 2. LOAD ENVIRONMENT VARIABLES
+# =====================================================
+load_dotenv()
+
+SERVICE_ACCOUNT_PATH = os.getenv("SERVICE_ACCOUNT_PATH")
+PAV_SEED_PATH = os.getenv("PAV_SEED_PATH")
+
+if not SERVICE_ACCOUNT_PATH:
+    raise ValueError("SERVICE_ACCOUNT_PATH not found in .env")
+
+if not PAV_SEED_PATH:
+    raise ValueError("PAV_SEED_PATH not found in .env")
+
+# =====================================================
+# 3. FIRESTORE INITIALIZATION WITH RETRY
+# =====================================================
+@retry(Exception, tries=5, delay=1, backoff=2)
+def init_firestore():
+    cred = credentials.Certificate(SERVICE_ACCOUNT_PATH)
+    if not firebase_admin._apps:
+        firebase_admin.initialize_app(cred)
+    return firestore.client()
+
+try:
+    db = init_firestore()
+    logger.info("Connected to Firebase Firestore successfully!")
+except Exception as e:
+    logger.error("Failed to initialize Firestore: %s", e)
+    raise
 
 
-cred = credentials.Certificate(SERVICE_ACCOUNT_PATH)
-firebase_admin.initialize_app(cred)
-db = firestore.client()
+# =====================================================
+# SAFE WRITE (RETRY FOR .set())
+# =====================================================
+@retry(Exception, tries=3, delay=1, backoff=2)
+def safe_set(collection: str, doc_id: str, data: dict):
+    db.collection(collection).document(doc_id).set(data)
 
-#HELPERS 
+
+# =====================================================
+# HELPER FUNCTIONS
+# =====================================================
 def slugify(text):
     t = text.lower()
     t = re.sub(r"[^a-z0-9]+", "_", t)
     return t.strip("_")
 
+
 def random_difficulty():
-    return random.choices(["easy", "medium", "hard"], weights=[0.5, 0.35, 0.15])[0]
+    return random.choices(["easy", "medium", "hard"],
+                          weights=[0.5, 0.35, 0.15])[0]
+
 
 def timestamp():
     return datetime.datetime.utcnow().isoformat()
 
+
 def make_ingredients(main, pool, count=8):
     items = []
-    main_qty = random.choice(["200g", "150g", "1 cup", "2 cups", "250g"])
-    items.append({"name": main, "quantity": main_qty})
 
+    # Main ingredient
+    items.append({
+        "name": main,
+        "quantity": random.choice(["100g", "150g", "1 cup", "200g", "2 cups"])
+    })
+
+    # Extra ingredients
     extras = random.sample(pool, k=count - 1)
-    qty_list = ["1 tsp", "2 tsp", "1 tbsp", "2 tbsp", "½ cup", "1 cup"]
+    qty_options = ["1 tsp", "2 tsp", "1 tbsp", "2 tbsp", "½ cup"]
+
     for e in extras:
-        items.append({"name": e, "quantity": random.choice(qty_list)})
+        items.append({"name": e, "quantity": random.choice(qty_options)})
 
     return items
 
-def make_steps(title, main, steps_n=7):
+
+def make_steps(title, main, steps_n=8):
     base = [
-        f"Wash, chop and prepare all ingredients needed for {title}.",
-        "Heat oil or ghee in a heavy-bottom pan on medium flame until lightly aromatic.",
-        "Add onions, ginger, garlic or green chillies and sauté until soft and golden.",
-        f"Add {main} along with any supporting vegetables or masala bases and cook briefly.",
-        "Add tomatoes and spice powders. Cook until the mixture thickens and becomes glossy.",
-        "Add a little water to adjust consistency. Cover and simmer on low flame.",
-        "Taste, adjust seasoning and cook for another minute for better flavor balance.",
-        "Finish with coriander, butter or lemon juice and serve warm."
+        f"Wash all ingredients for {title}.",
+        "Heat oil on medium flame.",
+        "Add onions, ginger, garlic; sauté until golden.",
+        f"Add {main} and other vegetables.",
+        "Add spices and cook until masala thickens.",
+        "Add water, cover and simmer for 10 minutes.",
+        "Adjust salt and mix well.",
+        "Serve hot with roti or rice."
     ]
-    return [{"order": i + 1, "text": base[i]} for i in range(steps_n)]
+    return [{"order": i+1, "text": base[i]} for i in range(steps_n)]
 
 
-# INSERT PRIMARY PAV BHAJI 
-with open(PAV_SEED_PATH, "r", encoding="utf-8") as f:
-    pav = json.load(f)
+# =====================================================
+# 5. INSERT MAIN PAV BHAJI RECIPE
+# =====================================================
+try:
+    logger.info("Loading Pav Bhaji seed data...")
+    with open(PAV_SEED_PATH, "r", encoding="utf-8") as f:
+        pav = json.load(f)
 
-pav["id"] = "pav_bhaji_001"
-pav["difficulty"] = random_difficulty()
-pav["cuisine"] = "Indian"
-pav["region"] = "Maharashtra"
-pav["calories"] = 420
-pav["tags"] = ["vegetarian", "street-food"]
-pav["created_at"] = timestamp()
+    pav["id"] = "pav_bhaji_001"
+    pav["difficulty"] = random_difficulty()
+    pav["cuisine"] = "Indian"
+    pav["region"] = "Maharashtra"
+    pav["created_at"] = timestamp()
 
-db.collection("recipes").document(pav["id"]).set(pav)
+    safe_set("recipes", pav["id"], pav)
+    logger.info("Inserted main recipe: Pav Bhaji")
+
+except Exception as e:
+    logger.error("Failed to insert Pav Bhaji: %s", e)
+    raise
 
 
-
-#19 MORE VEGETARIAN RECIPES 
+# =====================================================
+# 6. INSERT 19 OTHER RECIPES (ONE-BY-ONE WITH RETRY)
+# =====================================================
 recipe_titles = [
-    "Paneer Tikka Masala",
-    "Kadai Paneer",
-    "Palak Paneer",
-    "Shahi Paneer",
-    "Paneer Bhurji",
-    "Veg Biryani",
-    "Jeera Rice",
-    "Aloo Gobi",
-    "Chole Masala",
-    "Rajma Masala",
-    "Dal Tadka",
-    "Dal Makhani",
-    "Masala Dosa",
-    "Vegetable Sambar",
-    "Upma",
-    "Poha",
-    "Veg Manchurian",
-    "Vegetable Fried Rice",
-    "Bhindi Masala"
+    "Paneer Tikka Masala", "Kadai Paneer", "Palak Paneer", "Shahi Paneer",
+    "Paneer Bhurji", "Veg Biryani", "Jeera Rice", "Aloo Gobi", "Chole Masala",
+    "Rajma Masala", "Dal Tadka", "Dal Makhani", "Masala Dosa",
+    "Vegetable Sambar", "Upma", "Poha", "Veg Manchurian",
+    "Vegetable Fried Rice", "Bhindi Masala"
 ]
 
 common_ing = [
-    "onion", "tomato", "ginger", "garlic", "turmeric", "red chilli powder",
-    "coriander powder", "garam masala", "cumin seeds", "mustard seeds",
-    "green chilli", "oil", "butter", "peas", "carrot", "beans",
-    "capsicum", "lemon", "coriander leaves"
+    "onion", "tomato", "ginger", "garlic", "turmeric",
+    "red chilli powder", "coriander powder", "garam masala",
+    "oil", "butter", "peas", "carrot", "beans", "capsicum"
 ]
 
-recipe_ids = []
+logger.info("Generating vegetarian recipes...")
 
-for idx, title in enumerate(recipe_titles, start=2):
-    rid = f"{slugify(title)}_{idx:03d}"
+try:
+    for idx, title in enumerate(recipe_titles, start=2):
+        rid = f"{slugify(title)}_{idx:03d}"
 
-    # Determine main ingredient
-    first = slugify(title).split("_")[0]
-    main_map = {
-        "paneer": "paneer",
-        "aloo": "potato",
-        "veg": "mixed vegetables",
-        "chole": "chickpeas",
-        "rajma": "kidney beans",
-        "dal": "lentils",
-        "biryani": "basmati rice",
-        "rice": "rice",
-        "dosa": "rice batter",
-        "sambar": "lentils",
-        "poha": "flattened rice",
-        "bhindi": "okra"
-    }
-    main_ing = main_map.get(first, "mixed vegetables")
+        first = slugify(title).split("_")[0]
+        main_map = {
+            "paneer": "paneer",
+            "aloo": "potato",
+            "veg": "mixed vegetables",
+            "chole": "chickpeas",
+            "rajma": "kidney beans",
+            "dal": "lentils",
+            "rice": "rice",
+            "poha": "flattened rice",
+            "bhindi": "okra",
+            "dosa": "rice batter",
+            "sambar": "lentils"
+        }
+        main_ing = main_map.get(first, "mixed vegetables")
 
-    ing_count = random.choice([7, 8, 9])
-    ingredients = make_ingredients(main_ing, common_ing, ing_count)
+        ingredients = make_ingredients(main_ing, common_ing, random.randint(7, 9))
+        steps = make_steps(title, main_ing, random.randint(6, 8))
 
-    steps = make_steps(title, main_ing, random.choice([6, 7, 8]))
+        recipe = {
+            "id": rid,
+            "title": title,
+            "description": f"{title} prepared in a simple home-style method.",
+            "servings": random.choice([2, 3, 4]),
+            "prep_time_minutes": random.randint(10, 25),
+            "cook_time_minutes": random.randint(15, 40),
+            "difficulty": random_difficulty(),
+            "cuisine": random.choice(["North Indian", "South Indian", "Indo-Chinese"]),
+            "region": random.choice(["North India", "West India", "South India"]),
+            "calories": random.randint(250, 550),
+            "tags": ["vegetarian"],
+            "ingredients": ingredients,
+            "steps": steps,
+            "created_at": timestamp()
+        }
 
-    recipe = {
-        "id": rid,
-        "title": title,
-        "description": f"{title} prepared in a simple vegetarian style with balanced spices.",
-        "servings": random.choice([2,3,4]),
-        "prep_time_minutes": random.randint(10, 25),
-        "cook_time_minutes": random.randint(20, 45),
-        "difficulty": random_difficulty(),
-        "cuisine": random.choice(["North Indian", "South Indian", "Indo-Chinese"]),
-        "region": random.choice(["North India", "South India", "West India"]),
-        "calories": random.randint(250, 550),
-        "tags": ["vegetarian", "home-style"],
-        "ingredients": ingredients,
-        "steps": steps,
-        "created_at": timestamp()
-    }
+        safe_set("recipes", rid, recipe)
 
-    db.collection("recipes").document(recipe["id"]).set(recipe)
-    recipe_ids.append(recipe["id"])
+    logger.info("All vegetarian recipes inserted successfully!")
+
+except Exception as e:
+    logger.error("Failed to insert veg recipes: %s", e)
+    raise
 
 
-
-# USERS 
+# =====================================================
+# 7. INSERT USERS
+# =====================================================
 user_names = [
     "Aarav Sharma", "Riya Singh", "Kunal Verma", "Sneha Gupta", "Rohan Mehta",
     "Ananya Pillai", "Kavya Patil", "Manav Jain", "Tanvi Desai", "Siddharth Rao"
 ]
 
-users = []
+logger.info("Inserting users...")
 
-for name in user_names:
-    uid = "user_" + slugify(name)
-    user = {"id": uid, "name": name}
-    users.append(user)
-    db.collection("users").document(uid).set(user)
+try:
+    for name in user_names:
+        uid = "user_" + slugify(name)
+        user = {"id": uid, "name": name}
+        safe_set("users", uid, user)
+
+    logger.info("Users inserted successfully!")
+
+except Exception as e:
+    logger.error("Failed to insert users: %s", e)
+    raise
 
 
-#  INTERACTIONS
-all_recipes = ["pav_bhaji_001"] + recipe_ids
-interaction_types = ["view", "like", "cook_attempt"]
+# =====================================================
+# 8. INSERT INTERACTIONS
+# =====================================================
+logger.info("Generating interactions...")
 
-for _ in range(120):
-    rec = random.choice(all_recipes)
-    user = random.choice(users)["id"]
-    itype = random.choices(interaction_types, weights=[0.7, 0.2, 0.1])[0]
+try:
+    all_recipes = ["pav_bhaji_001"] + [
+        f"{slugify(title)}_{idx:03d}" for idx, title in enumerate(recipe_titles, start=2)
+    ]
+    interaction_types = ["view", "like", "cook_attempt"]
 
-    inter = {
-        "id": str(uuid.uuid4()),
-        "recipe_id": rec,
-        "user_id": user,
-        "type": itype,
-        "timestamp": timestamp(),
-        "rating": random.choice([None]*5 + [3,4,5])
-    }
+    for _ in range(120):
+        rec = random.choice(all_recipes)
+        user = random.choice(user_names)
+        user_id = "user_" + slugify(user)
 
-    db.collection("interactions").document(inter["id"]).set(inter)
+        itype = random.choices(interaction_types, weights=[0.7, 0.2, 0.1])[0]
 
-# PRINT SAFE 
-print("Recipes added.")
-print("Users created.")
-print("Interactions generated.")
-print("Setup finished.")
+        inter = {
+            "id": str(uuid.uuid4()),
+            "recipe_id": rec,
+            "user_id": user_id,
+            "type": itype,
+            "timestamp": timestamp(),
+            "rating": random.choice([None]*6 + [3, 4, 5])
+        }
 
+        safe_set("interactions", inter["id"], inter)
+
+    logger.info("Interactions inserted successfully!")
+
+except Exception as e:
+    logger.error("Failed to insert interactions: %s", e)
+    raise
+
+# =====================================================
+# DONE
+# =====================================================
+logger.info("Setup script completed successfully!")

@@ -1,91 +1,110 @@
-# scripts/3_transform_to_csv.py
-import firebase_admin
-from firebase_admin import credentials, firestore
 import pandas as pd
 import os
+import logging
+from utils_retry import retry
 
-# Initialize Firebase only once
-cred = credentials.Certificate(r"C:\Users\DELL\Desktop\recipe-pipeline\serviceAccount.json")
-if not firebase_admin._apps:
-    firebase_admin.initialize_app(cred)
-
-db = firestore.client()
-
-# Create output folder
-os.makedirs("outputs", exist_ok=True)
-
-
-# Extract RECIPES
-
-recipes_docs = db.collection("recipes").stream()
-recipes = []
-ingredients_rows = []
-steps_rows = []
-
-for doc in recipes_docs:
-    r = doc.to_dict()
-
-    recipes.append({
-        "id": r.get("id"),
-        "title": r.get("title"),
-        "description": r.get("description"),
-        "servings": r.get("servings"),
-        "prep_time_minutes": r.get("prep_time_minutes"),
-        "cook_time_minutes": r.get("cook_time_minutes"),
-        "difficulty": r.get("difficulty"),
-        "tags": "|".join(r.get("tags", [])),
-        "created_at": r.get("created_at")
-    })
-
-    for ing in r.get("ingredients", []):
-        ingredients_rows.append({
-            "recipe_id": r.get("id"),
-            "ingredient_name": ing.get("name"),
-            "ingredient_quantity": ing.get("quantity")
-        })
-
-    for st in r.get("steps", []):
-        steps_rows.append({
-            "recipe_id": r.get("id"),
-            "step_order": st.get("order"),
-            "step_text": st.get("text")
-        })
+# =====================================================
+# LOGGING
+# =====================================================
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger(__name__)
 
 
-# Extract INTERACTIONS
-
-inter_docs = db.collection("interactions").stream()
-interactions = []
-for d in inter_docs:
-    v = d.to_dict()
-    interactions.append({
-        "id": v.get("id"),
-        "recipe_id": v.get("recipe_id"),
-        "user_id": v.get("user_id"),
-        "type": v.get("type"),
-        "timestamp": v.get("timestamp"),
-        "rating": v.get("rating")
-    })
+# =====================================================
+# RETRY CSV READ (in case file is locked or slow)
+# =====================================================
+@retry(Exception, tries=3, delay=1, backoff=2)
+def safe_read_csv(path):
+    return pd.read_csv(path)
 
 
-# OPTIONAL: Extract USERS
+# =====================================================
+# MAIN TRANSFORMATION FUNCTION
+# =====================================================
+def transform_data():
 
-user_docs = db.collection("users").stream()
-users_rows = []
-for u in user_docs:
-    data = u.to_dict()
-    users_rows.append({
-        "id": data.get("id"),
-        "name": data.get("name")
-    })
+    input_folder = "outputs"
+    output_folder = "outputs/clean"
+    os.makedirs(output_folder, exist_ok=True)
+    logger.info("Clean output folder created.")
+
+    # ---------------------------- READ FILES ----------------------------
+    logger.info("Loading exported CSV files...")
+
+    recipes = safe_read_csv(f"{input_folder}/recipe.csv")
+    ingredients = safe_read_csv(f"{input_folder}/ingredients.csv")
+    steps = safe_read_csv(f"{input_folder}/steps.csv")
+    users = safe_read_csv(f"{input_folder}/users.csv")
+    interactions = safe_read_csv(f"{input_folder}/interactions.csv")
+
+    logger.info("All source CSV files successfully read.")
+
+    # ---------------------------- CLEAN RECIPES ----------------------------
+    logger.info("Cleaning recipes...")
+
+    recipes["title"] = recipes["title"].astype(str).str.strip()
+    recipes["difficulty"] = recipes["difficulty"].astype(str).str.lower()
+
+    # Remove duplicates if any
+    recipes = recipes.drop_duplicates(subset=["id"])
+
+    recipes.to_csv(f"{output_folder}/recipes_clean.csv", index=False)
+    logger.info("recipes_clean.csv created.")
+
+    # ---------------------------- CLEAN INGREDIENTS ----------------------------
+    logger.info("Cleaning ingredients...")
+
+    ingredients["ingredient_name"] = ingredients["ingredient_name"].astype(str).str.strip()
+    ingredients = ingredients.drop_duplicates()
+
+    ingredients.to_csv(f"{output_folder}/ingredients_clean.csv", index=False)
+    logger.info("ingredients_clean.csv created.")
+
+    # ---------------------------- CLEAN STEPS ----------------------------
+    logger.info("Cleaning steps...")
+
+    steps = steps.drop_duplicates()
+
+    steps["order"] = steps["order"].astype(int)
+
+    steps = steps.sort_values(by=["recipe_id", "order"])
+
+    steps.to_csv(f"{output_folder}/steps_clean.csv", index=False)
+    logger.info("steps_clean.csv created.")
+
+    # ---------------------------- CLEAN USERS ----------------------------
+    logger.info("Cleaning users...")
+
+    users = users.drop_duplicates()
+    users["name"] = users["name"].astype(str).str.title()
+
+    users.to_csv(f"{output_folder}/users_clean.csv", index=False)
+    logger.info("users_clean.csv created.")
+
+    # ---------------------------- CLEAN INTERACTIONS ----------------------------
+    logger.info("Cleaning interactions...")
+
+    interactions = interactions.drop_duplicates(subset=["id"])
+
+    # Convert timestamp to datetime safely
+    interactions["timestamp"] = pd.to_datetime(interactions["timestamp"], errors="coerce")
+
+    interactions.to_csv(f"{output_folder}/interactions_clean.csv", index=False)
+    logger.info("interactions_clean.csv created.")
+
+    # ---------------------------- DONE ----------------------------
+    logger.info("Transformation completed successfully!")
 
 
-# SAVE CSV FILES
-
-pd.DataFrame(recipes).to_csv("outputs/recipe.csv", index=False)
-pd.DataFrame(ingredients_rows).to_csv("outputs/ingredients.csv", index=False)
-pd.DataFrame(steps_rows).to_csv("outputs/steps.csv", index=False)
-pd.DataFrame(interactions).to_csv("outputs/interactions.csv", index=False)
-pd.DataFrame(users_rows).to_csv("outputs/users.csv", index=False)
-
-print("CSV files created in outputs/: recipe.csv, ingredients.csv, steps.csv, interactions.csv, users.csv")
+# =====================================================
+# MAIN
+# =====================================================
+if __name__ == "__main__":
+    try:
+        transform_data()
+    except Exception as e:
+        logger.error("Transformation failed: %s", e)
+        raise
