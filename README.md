@@ -382,4 +382,3 @@ Potential enhancements include:
 ## 👨‍💻 14. Author
 
 **Aditya Shukla**  
-Data Engineering & Analytics Pipeline Developer  
