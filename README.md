@@ -250,37 +250,27 @@ python scripts/run_pipeline.py
 
 ---
 
-⚠️ 10. Limitations
-Synthetic recipe descriptions are random
+## 📌 10. Limitations
 
-Ratings partially random
-
-Requires correct Firebase configuration
-
-Focused on vegetarian recipes
+* Ratings are partially random
+* Pipeline assumes correct Firestore configuration
+* Current dataset focuses only on vegetarian recipes
 
 ---
 
-🎯 11. What This Submission Demonstrates
-Complete end-to-end Data Engineering pipeline
+## 📌 11. Deliverables Included
 
-ETL + data modeling
-
-Semi-structured → structured transformation
-
-Data quality & validation framework
-
-Analytical model creation
-
-Visualization engineering
-
-Retry logic + logging
-
-Pipeline orchestration
+* Complete scripts ETL + data modeling
+* Semi-structured → structured transformation
+* Data quality & validation framework
+* Analytical model creation
+* Visualization engineerin
+* Retry logic + logging
+* Pipeline orchestration 
 
 ---
 
-👨‍💻 12. Author
+## 👨‍💻 12. Author
 Aditya Shukla
 
 
