@@ -190,97 +190,63 @@ Runs all steps in the correct order:
 
 ```bash
 python scripts/run_pipeline.py
-Includes:
-
-Error boundaries
-
-Logging
-
-Full pipeline automation
+```
 
 ---
 
-✔️ 7. Data Quality Rules Summary
-🟦 Recipes
-id, title required
+# ✔️ 7. Data Quality Rules Summary
 
-Difficulty ∈ {easy, medium, hard}
+### 🟦 Recipes
+- id, title required  
+- Difficulty ∈ {easy, medium, hard}  
+- prep/cook times ≥ 0  
 
-prep/cook times ≥ 0
+### 🟩 Ingredients
+- recipe_id required  
+- ingredient_name required  
 
-No missing timestamps
+### 🟨 Steps
+- step order ≥ 1  
+- Sequential per recipe  
 
-🟩 Ingredients
-recipe_id required
+### 🟧 Users
+- id unique  
+- name not null  
 
-ingredient_name required
-
-🟨 Steps
-recipe_id required
-
-step order ≥ 1
-
-Sequential per recipe
-
-🟧 Users
-id unique
-
-name not null
-
-🟥 Interactions
-recipe_id + user_id must reference valid tables
-
-type ∈ {view, like, cook_attempt}
-
-rating ∈ {1–5 or null}
+### 🟥 Interactions
+- type ∈ {view, like, cook_attempt}  
+- rating ∈ {1–5 or null}
 
 ---
 
-📊 8. Sample Insights Generated
-Most frequent ingredients
+# 📊 8. Sample Insights Generated
 
-Top 10 most viewed recipes
-
-Difficulty distribution
-
-Prep time vs likes correlation
-
-Step count analysis
-
-Engagement score ranking
-
-Ingredient frequency in high-engagement recipes
-
-Most active 20 users
-
-Complexity score analysis
-
-All charts saved under analysis/.
+- Most frequent ingredients  
+- Top 10 most viewed recipes  
+- Difficulty distribution  
+- Prep time vs likes correlation  
+- Step count analysis  
+- Engagement score ranking  
 
 ---
 
-▶️ 9. How to Run the Pipeline
+# ▶️ 9. How to Run the Pipeline
+
 Install dependencies:
-bash
-Copy code
+```bash
 pip install -r requirements.txt
-Add Firebase Secret Key:
-Place:
+```
 
-pgsql
-Copy code
-serviceAccount.json
-in the project root.
-
-Add .env file:
-ini
-Copy code
+Add secret keys:
+```
 SERVICE_ACCOUNT_PATH=serviceAccount.json
 PAV_SEED_PATH=seed_data.json
-Run the pipeline:
-bash
-Copy code
+```
+
+Run:
+```bash
 python scripts/run_pipeline.py
+```
 
 ---
 
