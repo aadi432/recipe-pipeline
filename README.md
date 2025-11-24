@@ -1,4 +1,10 @@
 # 🍽️ Recipe Analytics Pipeline (Firebase → Python → Analytics)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)
+![Firebase](https://img.shields.io/badge/Firebase-Firestore-orange?logo=firebase)
+![ETL](https://img.shields.io/badge/Pipeline-ETL-green)
+![Status](https://img.shields.io/badge/Status-Production_Ready-success)
+
+---
 
 A complete **Data Engineering pipeline** built for transforming **NoSQL Firestore recipe data** into **validated, analytical datasets** with visual insights.
 
@@ -17,21 +23,20 @@ This project demonstrates:
 
 # 📁 1. Folder Structure
 
+```
 recipe-pipeline/
-│── analysis/ # Generated charts + insights
-│── exports/ # Raw JSON exports from Firestore
+│── analysis/                # Generated charts + insights
+│── exports/                 # Raw JSON exports from Firestore
 │── outputs/
-│ ├── clean/ # Normalized cleaned CSVs
-│ └── validated/ # Validation reports
-│── scripts/ # ETL, validation, analytics, orchestration scripts
-│── seed_data.json # Primary Pav Bhaji recipe
-│── serviceAccount.json # Firebase authentication key (ignored via .gitignore)
-│── .env # Secret environment variables
+│     ├── clean/             # Normalized cleaned CSVs
+│     └── validated/         # Validation reports
+│── scripts/                 # ETL, validation, analytics, orchestration scripts
+│── seed_data.json           # Primary Pav Bhaji recipe
+│── serviceAccount.json      # Firebase authentication key (ignored via .gitignore)
+│── .env                     # Secret environment variables
 │── requirements.txt
 │── README.md
-
-yaml
-Copy code
+```
 
 ---
 
@@ -46,18 +51,13 @@ This pipeline executes an end-to-end workflow:
 5️⃣ Run analytics and generate **11+ charts**  
 6️⃣ Fully orchestrated with **run_pipeline.py**
 
-This simulates a real-world Data Engineering solution using a mix of NoSQL + relational modeling.
-
 ---
 
 # 🧩 3. Data Model (ER Diagram)
 
-The project uses **two data models**:
-
----
-
 ## 🔷 3.1 Firestore ERD (Nested NoSQL Model)
 
+```
 ┌────────────────────────────────────┐
 │               RECIPES              │
 │────────────────────────────────────│
@@ -70,8 +70,8 @@ The project uses **two data models**:
 │ cuisine                            │
 │ region                             │
 │ created_at                         │
-│ ingredients: [ { name, quantity } ]│  ← Nested Array
-│ steps:       [ { order, text } ]   │  ← Nested Array
+│ ingredients: [ { name, quantity } ]│
+│ steps:       [ { order, text } ]   │
 └───────────────────┬────────────────┘
                     │ 1-to-many
                     ▼
@@ -88,23 +88,18 @@ The project uses **two data models**:
                             │ many-to-1
                             ▼
                 ┌─────────────────────────────┐
-                │             USERS           │
+                │             USERS            │
                 │─────────────────────────────│
-                │ id                          │
-                │ name                        │
+                │ id                           │
+                │ name                         │
                 └─────────────────────────────┘
-
-
-### Relationships
-- Recipe → Ingredients = **1:N**  
-- Recipe → Steps = **1:N**  
-- Recipe → Interactions = **1:N**  
-- User → Interactions = **1:N**
+```
 
 ---
 
 ## 🔷 3.2 CSV / Analytics ERD (Flattened Relational)
 
+```
                ┌────────────────────────────────┐
                │          RECIPES_CLEAN         │
                │────────────────────────────────│
@@ -144,242 +139,62 @@ The project uses **two data models**:
                                           │ many-to-1
                                           ▼
                                ┌───────────────────────────────┐
-                               │          USERS_CLEAN          │
+                               │          USERS_CLEAN           │
                                │───────────────────────────────│
                                │ id (PK)                       │
                                │ name                          │
                                └───────────────────────────────┘
-
-
-Used for analytics & reporting.
+```
 
 ---
 
 # 🍛 4. Primary Dataset (Your Recipe)
 
-### 🟢 Primary real recipe: **Pav Bhaji**
+### 🟢 Pav Bhaji (Primary Dataset)
+- Real recipe provided by the candidate
+- Full ingredients & steps
+- Difficulty, time, tags, cuisine, region
 
-This satisfies the assignment requirement to include one **real recipe created by the candidate**.
-
-Included fields:
-- Ingredients (with quantities)
-- Step-by-step instructions
-- Time & difficulty
-- Cuisine, region, tags
-
-Stored in `seed_data.json`.
-
-### 🟡 Synthetic Data (Auto-generated)
-- **19 vegetarian recipes**
-- **10 sample Indian users**
-- **120+ interactions** (view/like/cook_attempt)
+### 🟡 Synthetic Data
+- 19 vegetarian recipes  
+- 10 users  
+- 120+ interactions  
 
 ---
 
 # ⚙️ 5. ETL / ELT Pipeline Steps
 
-## 🔹 Step 1 — Firestore Setup
-Script: `1_setup_firestore.py`
+## Step 1 — Insert Data into Firestore  
+`1_setup_firestore.py`
 
-- Loads Pav Bhaji (primary recipe)
-- Generates 19 synthetic recipes
-- Creates users
-- Creates interactions
-- Includes **retry logic + logging**
+## Step 2 — Export Firestore → JSON  
+`2_export_firestore.py`
 
----
+## Step 3 — Transform JSON → Clean CSV  
+`3_transform_to_csv.py`
 
-## 🔹 Step 2 — Export Firestore → JSON
-Script: `2_export_firestore.py`
+## Step 4 — Validate CSVs  
+`4_validate_csv.py`  
+`4a_custom_expectations_check.py`
 
-Exports:
-exports/recipes.json
-exports/users.json
-exports/interactions.json
-
-yaml
-Copy code
+## Step 5 — Analytics & Visualizations  
+`5_analytics.py`
 
 ---
 
-## 🔹 Step 3 — Transform JSON → Clean CSVs
-Script: `3_transform_to_csv.py`
+# 🎯 11. What This Submission Demonstrates
 
-Outputs:
-outputs/clean/recipes_clean.csv
-outputs/clean/ingredients_clean.csv
-outputs/clean/steps_clean.csv
-outputs/clean/users_clean.csv
-outputs/clean/interactions_clean.csv
-
-yaml
-Copy code
-
-Includes:
-- Flattening nested arrays  
-- Normalization  
-- Retry-safe reading  
-
----
-
-## 🔹 Step 4 — Data Validation (Custom GE-Style)
-Script: `4_validate_csv.py`  
-AND  
-Script: `4a_custom_expectations_check.py` (Great-Expectations style)
-
-Validates:
-- Required columns  
-- Unique IDs  
-- No NULLs in key fields  
-- Integer columns valid  
-- Foreign keys valid  
-- Step order valid  
-
-Output:
-outputs/validated/validation_report.txt
-outputs/validated/custom_ge_report.txt
-
-yaml
-Copy code
-
----
-
-## 🔹 Step 5 — Analytics & Visualizations
-Script: `5_analytics.py`
-
-Generates 10+ charts:
-- Top ingredients  
-- Difficulty distribution  
-- Prep vs likes correlation  
-- Top viewed recipes  
-- Step count distribution  
-- Top engaged recipes  
-- Most active users  
-- Complexity score distribution  
-- Engagement score analysis  
-- Etc.
-
-Saved to:
-analysis/*.png
-analysis/insights_summary.txt
-
-yaml
-Copy code
-
----
-
-# 🔁 6. Pipeline Orchestration
-
-Script: `run_pipeline.py`
-
-Runs all steps in the correct order:
-
-python scripts/run_pipeline.py
-
-yaml
-Copy code
-
-Includes:
-- Error boundaries  
+- End-to-end Data Engineering pipeline  
+- ETL + data modeling  
+- Semi-structured → structured transformation  
+- Data quality checks  
+- Analytical model creation  
+- Visualization engineering  
+- Retry logic  
 - Logging  
-- Full automation  
+- Orchestration  
 
 ---
 
-# ✔️ 7. Data Quality Rules Summary
-
-### 🟦 Recipes
-- id, title required  
-- Difficulty ∈ {easy, medium, hard}  
-- prep/cook times ≥ 0  
-- No missing timestamps  
-
-### 🟩 Ingredients
-- recipe_id required  
-- ingredient_name required  
-
-### 🟨 Steps
-- recipe_id required  
-- step order ≥ 1  
-- sequential per recipe  
-
-### 🟧 Users
-- id unique  
-- name not null  
-
-### 🟥 Interactions
-- recipe_id + user_id must reference valid tables  
-- type ∈ {view, like, cook_attempt}  
-- rating ∈ {1–5 or null}
-
----
-
-# 📊 8. Sample Insights Generated
-
-- Most frequent ingredients  
-- Top 10 most viewed recipes  
-- Difficulty distribution  
-- Prep time vs likes correlation  
-- Step count analysis  
-- Engagement score ranking  
-- Ingredient frequency in high-engagement recipes  
-- Most active 20 users  
-- Complexity score analysis  
-
-All charts saved under `analysis/`.
-
----
-
-# ▶️ 9. How to Run the Pipeline
-
-### Install dependencies:
-```bash
-pip install -r requirements.txt
-Add Firebase Secret Key
-Place your:
-
-pgsql
-Copy code
-serviceAccount.json
-in the project root.
-
-Add .env file:
-ini
-Copy code
-SERVICE_ACCOUNT_PATH=serviceAccount.json
-PAV_SEED_PATH=seed_data.json
-Run the full pipeline:
-bash
-Copy code
-python scripts/run_pipeline.py
-⚠️ 10. Limitations
-Synthetic recipe descriptions are random
-
-Ratings partially random
-
-Requires correct Firebase config
-
-Focused on vegetarian recipes only
-
-🎯 11. What This Submission Demonstrates
-End-to-end Data Engineering pipeline
-
-ETL + data modeling
-
-Semi-structured → structured transformation
-
-Data quality checks
-
-Analytical model creation
-
-Visualization engineering
-
-Retry logic + error handling
-
-Orchestration (one-click pipeline)
-
-📘 Conclusion
-This project shows a complete academic-style Data Engineering solution, transforming raw Firestore (NoSQL) data into clean, validated, analytics-ready tables. It includes modeling, validation, visualizations, and orchestration, making it suitable for real-world pipelines and technical assignments.
-
-🙌 Author
-Aditya Shukla
+# 👨‍💻 Author
+**Aditya Shukla**
