@@ -1,384 +1,332 @@
-🚀 Recipe Analytics Pipeline (Firebase + Python)
+# 🍽️ Recipe Analytics Pipeline (Firebase → Python → Analytics)
 
-This repository contains a complete end-to-end Data Engineering pipeline that ingests recipe data from Firestore, transforms it into structured analytical tables, validates data quality using custom Great-Expectations-style rules, and generates insights through visualization and statistics.
+A complete **Data Engineering pipeline** built for transforming **NoSQL Firestore recipe data** into **validated, analytical datasets** with visual insights.
 
-This project simulates a real-world Data Engineering assignment with:
+This project demonstrates:
 
-NoSQL → Structured ETL
+- Firestore data ingestion  
+- JSON export  
+- Data normalization to CSV  
+- Data validation (custom Great-Expectations style)  
+- Analytics & visualizations  
+- Retry logic & logging  
+- Orchestration via a single pipeline runner  
+- Dual data model (Firestore nested + CSV relational)
 
-Retry logic
+---
 
-Validation
+# 📁 1. Folder Structure
 
-Analytics
-
-Orchestration
-
-Secure secrets
-
-ERD diagrams
-
-Clean folder structure
-
-📌 1. Project Overview
-
-This pipeline performs the following:
-
-✔ Ingests seed + synthetic recipe data into Firestore
-
-Including a primary real dataset: Pav Bhaji.
-
-✔ Exports Firestore collections to JSON
-✔ Transforms JSON to normalized CSV tables
-
-Using professional flattening (ingredients & steps extracted properly).
-
-✔ Validates cleaned CSVs
-
-Using:
-
-Built-in validation
-
-Custom GE-style validator (Python 3.14 compatible)
-
-✔ Generates analytics & charts
-✔ Runs end-to-end using one command
-
-python scripts/run_pipeline.py
-
-📁 2. Folder Structure
 recipe-pipeline/
-│── analysis/                # Charts + insight summaries
-│── exports/                 # Raw Firestore JSON exports
+│── analysis/ # Generated charts + insights
+│── exports/ # Raw JSON exports from Firestore
 │── outputs/
-│     ├── clean/             # Cleaned normalized CSVs
-│     ├── validated/         # Validation reports
-│── scripts/                 # ETL + validation + analytics + retry logic
-│── seed_data.json           # Primary Pav Bhaji seed recipe
-│── serviceAccount.json       # Firestore service key (ignored in git)
-│── .env                     # Secure variable storage
+│ ├── clean/ # Normalized cleaned CSVs
+│ └── validated/ # Validation reports
+│── scripts/ # ETL, validation, analytics, orchestration scripts
+│── seed_data.json # Primary Pav Bhaji recipe
+│── serviceAccount.json # Firebase authentication key (ignored via .gitignore)
+│── .env # Secret environment variables
 │── requirements.txt
 │── README.md
 
-📌 3. Data Model (ER Models)
+yaml
+Copy code
 
-This pipeline uses two data models:
+---
 
-🔷 A. Firestore ERD (Source Model — Nested NoSQL)
- ┌─────────────────────┐
- │       RECIPES       │
- │─────────────────────│
- │ id (PK)             │
- │ title               │
- │ description         │
- │ ingredients[]       │───┐
- │ steps[]             │──┐│
- │ difficulty          │  ││ Nested arrays
- │ prep_time           │  ││
- │ cook_time           │  ││
- │ tags[]              │  ││
- └────────────┬────────┘  ││
-              │           ││
-     ┌────────▼───────┐   ││
-     │  INTERACTIONS  │   ││
-     │────────────────│   ││
-     │ id (PK)        │   ││
-     │ recipe_id (FK) │◀──┘│
-     │ user_id (FK)   │◀────┘
-     │ type           │
-     │ rating         │
-     └────────┬───────┘
-              │
-    ┌─────────▼────────┐
-    │       USERS       │
-    └───────────────────┘
+# 🧠 2. Project Overview
 
-🔷 B. CSV / Analytics ERD (Flattened Model)
- RECIPES_CLEAN
-      │ id (PK)
-      │ title, difficulty, prep_time, …
-      │
-      ├───────────────┐
-      ▼               ▼
-INGREDIENTS_CLEAN   STEPS_CLEAN
-recipe_id (FK)      recipe_id (FK)
-ingredient_name     order
-quantity            text
+This pipeline executes an end-to-end workflow:
 
-INTERACTIONS_CLEAN
-recipe_id (FK)
-user_id (FK)
+1️⃣ Insert seed + synthetic recipe data into **Firebase Firestore**  
+2️⃣ Export Firestore → **JSON**  
+3️⃣ Normalize JSON → **clean CSV datasets**  
+4️⃣ Validate CSVs using a **custom Great-Expectations style validator**  
+5️⃣ Run analytics and generate **11+ charts**  
+6️⃣ Fully orchestrated with **run_pipeline.py**
 
-USERS_CLEAN
-id (PK)
+This simulates a real-world Data Engineering solution using a mix of NoSQL + relational modeling.
 
-📌 4. Firebase Source Data Setup
-🔐 Secrets (Stored Securely)
+---
 
-The project uses:
+# 🧩 3. Data Model (ER Diagram)
 
-serviceAccount.json
+The project uses **two data models**:
 
-.env → contains SERVICE_ACCOUNT_PATH & PAV_SEED_PATH
+---
 
-Both ignored via .gitignore.
+## 🔷 3.1 Firestore ERD (Nested NoSQL Model)
 
-📌 Primary Dataset: Pav Bhaji (seed_data.json)
+┌──────────────────────────────┐
+│ RECIPES │
+│ id, title, desc, times, ... │
+│ ingredients: [ {name, qty} ] │
+│ steps: [ {order, text} ] │
+└───────────────┬──────────────┘
+│ 1-to-many
+▼
+┌────────────────────────┐
+│ INTERACTIONS │
+│ recipe_id, user_id │
+│ type, rating, timestamp│
+└────────────┬───────────┘
+│ many-to-1
+▼
+┌──────────────────────┐
+│ USERS │
+│ id, name │
+└──────────────────────┘
 
-This is the main real recipe used to fulfill assignment requirements.
+yaml
+Copy code
 
-Includes:
+### Relationships
+- Recipe → Ingredients = **1:N**  
+- Recipe → Steps = **1:N**  
+- Recipe → Interactions = **1:N**  
+- User → Interactions = **1:N**
 
-Real ingredients
+---
 
-Real step-by-step instructions
+## 🔷 3.2 CSV / Analytics ERD (Flattened Relational)
 
-Difficulty, region, cuisine metadata
+RECIPES_CLEAN ───┬───< INGREDIENTS_CLEAN
+├───< STEPS_CLEAN
+└───< INTERACTIONS_CLEAN >── USERS_CLEAN
 
-📌 Synthetic Dataset Generated
+yaml
+Copy code
 
-The pipeline auto-generates:
+Used for analytics & reporting.
 
-19 vegetarian recipes
+---
 
-10 users
+# 🍛 4. Primary Dataset (Your Recipe)
 
-360+ interactions
+### 🟢 Primary real recipe: **Pav Bhaji**
 
-Inserted into Firestore collections:
+This satisfies the assignment requirement to include one **real recipe created by the candidate**.
 
-recipes
+Included fields:
+- Ingredients (with quantities)
+- Step-by-step instructions
+- Time & difficulty
+- Cuisine, region, tags
 
-users
+Stored in `seed_data.json`.
 
-interactions
+### 🟡 Synthetic Data (Auto-generated)
+- **19 vegetarian recipes**
+- **10 sample Indian users**
+- **120+ interactions** (view/like/cook_attempt)
 
-📌 5. ETL / ELT Pipeline Steps
-🟦 Step 1 — Setup Firestore
+---
 
-scripts/1_setup_firestore.py
+# ⚙️ 5. ETL / ELT Pipeline Steps
 
-Inserts Pav Bhaji (primary seed dataset)
+## 🔹 Step 1 — Firestore Setup
+Script: `1_setup_firestore.py`
 
-Generates vegetarian recipes
+- Loads Pav Bhaji (primary recipe)
+- Generates 19 synthetic recipes
+- Creates users
+- Creates interactions
+- Includes **retry logic + logging**
 
-Creates users
+---
 
-Inserts interactions
-
-Includes retry logic for Firestore operations
-
-Uses .env for secure secrets
-
-🟦 Step 2 — Export Firestore → JSON
-
-scripts/2_export_firestore.py
+## 🔹 Step 2 — Export Firestore → JSON
+Script: `2_export_firestore.py`
 
 Exports:
-
 exports/recipes.json
 exports/users.json
 exports/interactions.json
 
+yaml
+Copy code
 
-Includes:
+---
 
-Retry logic
+## 🔹 Step 3 — Transform JSON → Clean CSVs
+Script: `3_transform_to_csv.py`
 
-Logging
-
-🟦 Step 3 — Transform JSON → Normalized CSV
-
-scripts/3_transform_to_csv.py
-
-Outputs (clean tables):
-
+Outputs:
 outputs/clean/recipes_clean.csv
 outputs/clean/ingredients_clean.csv
 outputs/clean/steps_clean.csv
 outputs/clean/users_clean.csv
 outputs/clean/interactions_clean.csv
 
-🟦 Step 4 — Data Validation
+yaml
+Copy code
 
-Two layers:
+Includes:
+- Flattening nested arrays  
+- Normalization  
+- Retry-safe reading  
 
-A. Basic Validation (4_validate_csv.py)
+---
 
-Checks:
+## 🔹 Step 4 — Data Validation (Custom GE-Style)
+Script: `4_validate_csv.py`  
+AND  
+Script: `4a_custom_expectations_check.py` (Great-Expectations style)
 
-Required columns
+Validates:
+- Required columns  
+- Unique IDs  
+- No NULLs in key fields  
+- Integer columns valid  
+- Foreign keys valid  
+- Step order valid  
 
-No missing recipe/user IDs
-
-Positive times
-
-Step ordering
-
-Duplicate detection
-
-B. Custom Great-Expectations-Style Validation
-
-scripts/4a_custom_expectations_check.py
-
-Generates:
-
+Output:
+outputs/validated/validation_report.txt
 outputs/validated/custom_ge_report.txt
 
+yaml
+Copy code
 
-Checks:
+---
 
-Column existence
+## 🔹 Step 5 — Analytics & Visualizations
+Script: `5_analytics.py`
 
-Null checks
+Generates 10+ charts:
+- Top ingredients  
+- Difficulty distribution  
+- Prep vs likes correlation  
+- Top viewed recipes  
+- Step count distribution  
+- Top engaged recipes  
+- Most active users  
+- Complexity score distribution  
+- Engagement score analysis  
+- Etc.
 
-Uniqueness
-
-Integer-like values
-
-Foreign key integrity
-
-100% Python 3.14 compatible.
-
-🟦 Step 5 — Analytics & Visualization
-
-scripts/5_analytics.py
-
-Generates:
-
-Ingredient frequency chart
-
-Difficulty distribution
-
-Top 10 viewed recipes
-
-Step count distribution
-
-User activity
-
-Prep vs likes correlation
-
-Complexity score
-
-Engagement score
-
-Outputs (examples):
-
-analysis/top_ingredients.png
-analysis/difficulty_distribution.png
-analysis/top_viewed_recipes.png
-analysis/complexity_distribution.png
+Saved to:
+analysis/*.png
 analysis/insights_summary.txt
 
-📌 6. Key Data Quality Rules
-✔ Recipes
+yaml
+Copy code
 
-Must contain id, title, difficulty
+---
 
-prep/cook times ≥ 0
+# 🔁 6. Pipeline Orchestration
 
-difficulty ∈ {easy, medium, hard}
+Script: `run_pipeline.py`
 
-✔ Ingredients
-
-recipe_id required
-
-ingredient_name required
-
-✔ Steps
-
-valid integer step order
-
-all steps must belong to a recipe
-
-✔ Interactions
-
-recipe_id and user_id must exist
-
-type ∈ {view, like, cook_attempt}
-
-rating ∈ {1–5 or NULL}
-
-📌 7. Orchestration (Automated Pipeline)
-
-run_pipeline.py orchestrates:
-
-1. Setup Firestore
-2. Export JSON
-3. Transform CSV
-4. Validate data
-5. Run analytics
-
-
-One command runs the entire pipeline:
+Runs all steps in the correct order:
 
 python scripts/run_pipeline.py
 
-📌 8. How to Run
-1️⃣ Install Dependencies
+yaml
+Copy code
+
+Includes:
+- Error boundaries  
+- Logging  
+- Full automation  
+
+---
+
+# ✔️ 7. Data Quality Rules Summary
+
+### 🟦 Recipes
+- id, title required  
+- Difficulty ∈ {easy, medium, hard}  
+- prep/cook times ≥ 0  
+- No missing timestamps  
+
+### 🟩 Ingredients
+- recipe_id required  
+- ingredient_name required  
+
+### 🟨 Steps
+- recipe_id required  
+- step order ≥ 1  
+- sequential per recipe  
+
+### 🟧 Users
+- id unique  
+- name not null  
+
+### 🟥 Interactions
+- recipe_id + user_id must reference valid tables  
+- type ∈ {view, like, cook_attempt}  
+- rating ∈ {1–5 or null}
+
+---
+
+# 📊 8. Sample Insights Generated
+
+- Most frequent ingredients  
+- Top 10 most viewed recipes  
+- Difficulty distribution  
+- Prep time vs likes correlation  
+- Step count analysis  
+- Engagement score ranking  
+- Ingredient frequency in high-engagement recipes  
+- Most active 20 users  
+- Complexity score analysis  
+
+All charts saved under `analysis/`.
+
+---
+
+# ▶️ 9. How to Run the Pipeline
+
+### Install dependencies:
+```bash
 pip install -r requirements.txt
+Add Firebase Secret Key
+Place your:
 
-2️⃣ Place Firestore Key
-
-Place your secure:
-
+pgsql
+Copy code
 serviceAccount.json
+in the project root.
 
-
-inside project root.
-
-3️⃣ Set environment variables
-
-Create .env:
-
+Add .env file:
+ini
+Copy code
 SERVICE_ACCOUNT_PATH=serviceAccount.json
 PAV_SEED_PATH=seed_data.json
-
-4️⃣ Run Pipeline
+Run the full pipeline:
+bash
+Copy code
 python scripts/run_pipeline.py
+⚠️ 10. Limitations
+Synthetic recipe descriptions are random
 
-📌 9. Limitations
+Ratings partially random
 
-Synthetic recipes not real-world accurate
+Requires correct Firebase config
 
-Ratings are randomly generated
+Focused on vegetarian recipes only
 
-Project assumes working Firestore configuration
+🎯 11. What This Submission Demonstrates
+End-to-end Data Engineering pipeline
 
-Primarily vegetarian dataset
+ETL + data modeling
 
-📌 10. Deliverables Included
+Semi-structured → structured transformation
 
-Full ETL pipeline
+Data quality checks
 
-JSON exports
+Analytical model creation
 
-Normalized CSV datasets
+Visualization engineering
 
-Custom data quality validation (GE-style)
+Retry logic + error handling
 
-Charts + insights
-
-Complete orchestration
-
-Full README for assignment
+Orchestration (one-click pipeline)
 
 📘 Conclusion
+This project shows a complete academic-style Data Engineering solution, transforming raw Firestore (NoSQL) data into clean, validated, analytics-ready tables. It includes modeling, validation, visualizations, and orchestration, making it suitable for real-world pipelines and technical assignments.
 
-This project demonstrates a fully functional Data Engineering workflow, transforming semi-structured Firestore data into validated analytical datasets. It includes:
-
-Data modeling
-
-Secure key handling
-
-Firestore ingestion
-
-ETL/ELT processing
-
-Data validation
-
-Analytics
-
-Orchestration
-
-It is structured, professional, and suitable for academic submission or real-world Data Engineering evaluation.
+🙌 Author
+Aditya Shukla
