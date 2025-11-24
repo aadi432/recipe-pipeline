@@ -182,19 +182,141 @@ This pipeline executes an end-to-end workflow:
 
 ---
 
-# 🎯 11. What This Submission Demonstrates
+# 🔁 6. Pipeline Orchestration
 
-- End-to-end Data Engineering pipeline  
-- ETL + data modeling  
-- Semi-structured → structured transformation  
-- Data quality checks  
-- Analytical model creation  
-- Visualization engineering  
-- Retry logic  
-- Logging  
-- Orchestration  
+Script: `run_pipeline.py`
+
+Runs all steps in the correct order:
+
+```bash
+python scripts/run_pipeline.py
+Includes:
+
+Error boundaries
+
+Logging
+
+Full pipeline automation
 
 ---
 
-# 👨‍💻 Author
-**Aditya Shukla**
+✔️ 7. Data Quality Rules Summary
+🟦 Recipes
+id, title required
+
+Difficulty ∈ {easy, medium, hard}
+
+prep/cook times ≥ 0
+
+No missing timestamps
+
+🟩 Ingredients
+recipe_id required
+
+ingredient_name required
+
+🟨 Steps
+recipe_id required
+
+step order ≥ 1
+
+Sequential per recipe
+
+🟧 Users
+id unique
+
+name not null
+
+🟥 Interactions
+recipe_id + user_id must reference valid tables
+
+type ∈ {view, like, cook_attempt}
+
+rating ∈ {1–5 or null}
+
+---
+
+📊 8. Sample Insights Generated
+Most frequent ingredients
+
+Top 10 most viewed recipes
+
+Difficulty distribution
+
+Prep time vs likes correlation
+
+Step count analysis
+
+Engagement score ranking
+
+Ingredient frequency in high-engagement recipes
+
+Most active 20 users
+
+Complexity score analysis
+
+All charts saved under analysis/.
+
+---
+
+▶️ 9. How to Run the Pipeline
+Install dependencies:
+bash
+Copy code
+pip install -r requirements.txt
+Add Firebase Secret Key:
+Place:
+
+pgsql
+Copy code
+serviceAccount.json
+in the project root.
+
+Add .env file:
+ini
+Copy code
+SERVICE_ACCOUNT_PATH=serviceAccount.json
+PAV_SEED_PATH=seed_data.json
+Run the pipeline:
+bash
+Copy code
+python scripts/run_pipeline.py
+
+---
+
+⚠️ 10. Limitations
+Synthetic recipe descriptions are random
+
+Ratings partially random
+
+Requires correct Firebase configuration
+
+Focused on vegetarian recipes
+
+---
+
+🎯 11. What This Submission Demonstrates
+Complete end-to-end Data Engineering pipeline
+
+ETL + data modeling
+
+Semi-structured → structured transformation
+
+Data quality & validation framework
+
+Analytical model creation
+
+Visualization engineering
+
+Retry logic + logging
+
+Pipeline orchestration
+
+---
+
+👨‍💻 12. Author
+Aditya Shukla
+
+
+
+
